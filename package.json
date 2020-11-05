@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/kwilczyn/Cypress_playgorund#readme",
   "devDependencies": {
-    "cypress": "^5.5.0"
+    "cypress": "^5.5.0",
+    "cypress-xpath": "^1.6.1"
   }
 }
