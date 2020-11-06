@@ -1,3 +1,8 @@
 {
-    "baseUrl": "http://localhost:80"
+    "baseUrl": "http://localhost:80",
+    "env": {
+        "username": "user1",
+        "password": "password"
+      }
+
 }
