@@ -9,6 +9,7 @@ class ResultPage extends Site{
 
     visit(){
         cy.visit('/category.html')
+        .wait('@getCart')
         return this
     }
 
@@ -26,7 +27,7 @@ class ResultPage extends Site{
     }
 
     click_submit_filter_button(){
-        this.get_submit_filter_button().click().wait('@getCatalogue')
+        this.get_submit_filter_button().click().wait('@getCart')
         return this
     }
 
@@ -35,9 +36,8 @@ class ResultPage extends Site{
     }
 
     add_product_to_cart(product_name){
-        this.get_product_selector(product_name).click()
-        cy.wait(['@getCatalogue', '@getCustomers'])
-        return this
+        this.get_product_selector(product_name).click().wait('@getCart').wait('@getCatalogue')
+        return this  
     }
 
     navigate_to_cart_page(){
