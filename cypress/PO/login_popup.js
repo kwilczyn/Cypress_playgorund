@@ -13,12 +13,12 @@ class LoginPopup{
     }
 
     set_username(value){
-        this.get_username_inputbox().type(value)
+        this.get_username_inputbox().type(value, { force: true })
         return this
     }
 
     set_password(value){
-        this.get_password_inputbox().click().type(value)
+        this.get_password_inputbox().click().type(value, { force: true })
         return this
     }
 
